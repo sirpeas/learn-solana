@@ -36,17 +36,21 @@ await airdropIfRequired(
   0.5 * LAMPORTS_PER_SOL,
 );
 
+const transferStart = Date.now();
 const sendSolInstruction = SystemProgram.transfer({
   fromPubkey: senderKeypair.publicKey,
   toPubkey,
   lamports: LAMPORTS_TO_SEND,
 });
 
-transaction.add(sendSolInstruction);
+const currentTransaction = transaction.add(sendSolInstruction);
 
 const signature = await sendAndConfirmTransaction(connection, transaction, [
   senderKeypair,
 ]);
+const transferEnd = Date.now();
+const transferTime = (transferEnd - transferStart) / 1000;
 
 console.log(`💸 Finished! Sent ${LAMPORTS_TO_SEND} to the address ${toPubkey}. `);
+console.log(`Fee payed for transaction is ${currentTransaction.feePayer || 0} and transfer took ${transferTime} seconds.`);
 console.log(`Transaction signature is ${signature}!`);

@@ -8,10 +8,12 @@
     "build": "./node_modules/.bin/next build",
     "start": "./node_modules/.bin/next start",
     "lint": "./node_modules/.bin/next lint",
+    "lint:fix": "./node_modules/.bin/next lint --fix",
     "new": "./node_modules/.bin/plop"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.5-alpha.3",
+    "eslint-plugin-import": "^2.31.0",
     "ky": "^1.7.5",
     "next": "15.1.7",
     "react": "^19.0.0",

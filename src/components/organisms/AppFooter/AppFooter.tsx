@@ -1,5 +1,4 @@
 import { FC } from 'react';
-
 import { Props } from './types';
 
 const AppFooter: FC<Props> = (props) => {

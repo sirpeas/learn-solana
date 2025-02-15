@@ -1,7 +1,6 @@
-import { FC } from 'react';
-import Image from 'next/image';
 import { Wallet } from "@phosphor-icons/react/dist/ssr";
-
+import Image from 'next/image';
+import { FC } from 'react';
 import { Props } from './types';
 
 const AppHeader: FC<Props> = (props) => {

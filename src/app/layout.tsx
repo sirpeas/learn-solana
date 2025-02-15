@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import { Roboto_Flex } from 'next/font/google'
 import '@/app/globals.css'
 
-import AppHeader from '@/components/organisms/AppHeader';
 import AppFooter from '@/components/organisms/AppFooter';
+import AppHeader from '@/components/organisms/AppHeader';
 import SWRProvider from '@/components/organisms/SWRProvider';
 
 const robotoFlex = Roboto_Flex({
   variable: '--font-roboto-flex',
-  weight: ['300', '500', '600'],
+  weight: ['300', '500', '600', '700'],
   subsets: ['latin'],
 });
 
@@ -30,7 +30,7 @@ export default function RootLayout({
       >
         <SWRProvider>
           <AppHeader />
-          <div className="max-w-7xl mx-auto mt-10 flex-1 text-cyan-950">
+          <div className="w-full max-w-7xl mx-auto mt-10 mb-10 flex-1 text-cyan-950">
             {children}
           </div>
           <AppFooter />

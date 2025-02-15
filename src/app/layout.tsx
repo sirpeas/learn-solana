@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Roboto_Flex } from 'next/font/google'
 import '@/app/globals.css'
-
 import AppFooter from '@/components/organisms/AppFooter';
 import AppHeader from '@/components/organisms/AppHeader';
 import SWRProvider from '@/components/organisms/SWRProvider';

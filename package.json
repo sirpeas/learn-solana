@@ -8,6 +8,7 @@
     "build": "./node_modules/.bin/next build",
     "start": "./node_modules/.bin/next start",
     "lint": "./node_modules/.bin/next lint",
+    "typecheck": "./node_modules/.bin/tsc --noEmit",
     "lint:fix": "./node_modules/.bin/next lint --fix",
     "new": "./node_modules/.bin/plop"
   },

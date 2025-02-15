@@ -1,8 +1,9 @@
-import type { Metadata } from 'next'
-import { Roboto_Flex } from 'next/font/google'
-import '@/app/globals.css'
+import type { Metadata } from 'next';
+import { Roboto_Flex } from 'next/font/google';
+import '@/app/globals.css';
 import AppFooter from '@/components/organisms/AppFooter';
 import AppHeader from '@/components/organisms/AppHeader';
+import SolanaProvider from '@/components/organisms/SolanaProvider';
 import SWRProvider from '@/components/organisms/SWRProvider';
 
 const robotoFlex = Roboto_Flex({
@@ -25,15 +26,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${robotoFlex.variable} ${robotoFlex.className} antialiased bg-mint-500 flex flex-col min-h-screen`}
+        className={`${robotoFlex.variable} ${robotoFlex.className} antialiased bg-mint-500 flex flex-col min-h-screen text-cyan-950`}
       >
-        <SWRProvider>
-          <AppHeader />
-          <div className="w-full max-w-7xl mx-auto mt-10 mb-10 flex-1 text-cyan-950">
-            {children}
-          </div>
-          <AppFooter />
-        </SWRProvider>
+        <SolanaProvider>
+          <SWRProvider>
+            <AppHeader />
+            <div className="w-full max-w-7xl mx-auto mt-10 mb-10 flex-1">
+              {children}
+            </div>
+            <AppFooter />
+          </SWRProvider>
+        </SolanaProvider>
       </body>
     </html>
   );

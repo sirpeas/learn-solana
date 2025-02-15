@@ -15,7 +15,8 @@
     "ky": "^1.7.5",
     "next": "15.1.7",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "swr": "^2.3.2"
   },
   "devDependencies": {
     "@bonfida/spl-name-service": "^3.0.9",

@@ -4,6 +4,7 @@ import '@/app/globals.css'
 
 import AppHeader from '@/components/organisms/AppHeader';
 import AppFooter from '@/components/organisms/AppFooter';
+import SWRProvider from '@/components/organisms/SWRProvider';
 
 const robotoFlex = Roboto_Flex({
   variable: '--font-roboto-flex',
@@ -27,11 +28,13 @@ export default function RootLayout({
       <body
         className={`${robotoFlex.variable} ${robotoFlex.className} antialiased bg-mint-500 flex flex-col min-h-screen`}
       >
-        <AppHeader />
-        <div className="max-w-7xl mx-auto mt-10 flex-1">
-          {children}
-        </div>
-        <AppFooter />
+        <SWRProvider>
+          <AppHeader />
+          <div className="max-w-7xl mx-auto mt-10 flex-1 text-cyan-950">
+            {children}
+          </div>
+          <AppFooter />
+        </SWRProvider>
       </body>
     </html>
   );

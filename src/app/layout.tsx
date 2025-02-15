@@ -26,12 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${robotoFlex.variable} ${robotoFlex.className} antialiased bg-mint-500 flex flex-col min-h-screen`}
+        className={`${robotoFlex.variable} ${robotoFlex.className} antialiased bg-mint-500 flex flex-col min-h-screen text-cyan-950`}
       >
         <SolanaProvider>
           <SWRProvider>
             <AppHeader />
-            <div className="w-full max-w-7xl mx-auto mt-10 mb-10 flex-1 text-cyan-950">
+            <div className="w-full max-w-7xl mx-auto mt-10 mb-10 flex-1">
               {children}
             </div>
             <AppFooter />

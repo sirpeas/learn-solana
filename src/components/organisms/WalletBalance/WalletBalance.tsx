@@ -48,7 +48,7 @@ const WalletBalance = () => {
   }
 
   return (
-    <div className="bg-cyan-950 inline-block p-4 text-white rounded-lg">
+    <div className="bg-cyan-950 inline-block p-4 text-white rounded-lg mb-4 mx-auto">
       {publicKey ? `Balance: ${balance} SOL` : ""}
     </div>
   );

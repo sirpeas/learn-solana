@@ -1,2 +1,2 @@
-import { CoinGeckoAPI } from './CoinGecko';
-export { CoinGeckoAPI };
+import { CoinAPI } from './CoinAPI';
+export { CoinAPI };

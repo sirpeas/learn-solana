@@ -1,13 +1,12 @@
 'use client'
-import { FC, useMemo } from 'react';
 import {
   ConnectionProvider,
   WalletProvider,
 } from '@solana/wallet-adapter-react';
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import { clusterApiUrl } from '@solana/web3.js';
+import { FC, useMemo } from 'react';
 import "@solana/wallet-adapter-react-ui/styles.css";
-
 import { Props } from './types';
 
 const endpoint = clusterApiUrl('devnet');

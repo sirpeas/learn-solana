@@ -1,8 +1,8 @@
 'use client'
 import { Wallet, SignOut } from '@phosphor-icons/react/dist/ssr';
+import { useWallet } from '@solana/wallet-adapter-react';
 import { useCallback } from 'react';
 
-import { useWallet } from '@solana/wallet-adapter-react';
 
 const WalletConnectionButton = () => {
   const { wallets, connect, disconnect, disconnecting, connecting, connected, select } = useWallet();

@@ -3,8 +3,8 @@ import { Roboto_Flex } from 'next/font/google';
 import '@/app/globals.css';
 import AppFooter from '@/components/organisms/AppFooter';
 import AppHeader from '@/components/organisms/AppHeader';
-import SWRProvider from '@/components/organisms/SWRProvider';
 import SolanaProvider from '@/components/organisms/SolanaProvider';
+import SWRProvider from '@/components/organisms/SWRProvider';
 
 const robotoFlex = Roboto_Flex({
   variable: '--font-roboto-flex',

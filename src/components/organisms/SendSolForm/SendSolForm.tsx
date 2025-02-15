@@ -1,11 +1,11 @@
 'use client'
-import { FormEvent, useCallback, useState } from 'react';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import {
   LAMPORTS_PER_SOL,
   PublicKey, SystemProgram,
   Transaction,
 } from '@solana/web3.js';
+import { FormEvent, useCallback, useState } from 'react';
 
 const SendSolForm = () => {
   const [isFormProcessing, setIsFormProcessing] = useState(false);

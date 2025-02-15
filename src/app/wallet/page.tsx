@@ -1,7 +1,7 @@
 'use client'
-import WalletBalance from '@/components/organisms/WalletBalance';
-import SendSolForm from '@/components/organisms/SendSolForm';
 import { useWallet } from '@solana/wallet-adapter-react';
+import SendSolForm from '@/components/organisms/SendSolForm';
+import WalletBalance from '@/components/organisms/WalletBalance';
 
 
 export default function Wallet() {

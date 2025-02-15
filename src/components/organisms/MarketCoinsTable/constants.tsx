@@ -10,7 +10,7 @@ export const headers: TableHeader<CryptoAsset, Record<string, CryptoIcon>>[] = [
     console.log(rowData, extraData)
     return (
       <div className="flex justify-start items-center">
-        {extraData[rowData.asset_id]?.url ? <Image src={extraData[rowData.asset_id]?.url} alt={rowData.name}/> : null}
+        {extraData[rowData.asset_id]?.url ? <Image src={extraData[rowData.asset_id]?.url} width={32} height={32} alt={rowData.name}/> : null}
         <span className="ml-2">{rowData.name}</span>
       </div>
     )
